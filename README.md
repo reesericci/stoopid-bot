@@ -1,1 +1,1 @@
-# stoopid-bot
+# stoopid.xyz
