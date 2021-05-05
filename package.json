@@ -1,0 +1,15 @@
+{
+  "name": "stoopid-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "reesericci & 64Bit",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "eslint": "^7.25.0"
+  }
+}
