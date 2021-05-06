@@ -6,6 +6,31 @@ const timer = ms => new Promise( res => setTimeout(res, ms));
 client.on('ready', () => {
   console.log('Bot is Running');
   client.user.setActivity('stoopid.xyz - /help', ({type: "PLAYING"}))
+  // Define slash commands
+  client.api.applications(client.user.id).commands.post({data: {
+      "options": [
+        {
+          "type": 6,
+          "name": "user",
+          "description": "Do you want to DM spam a user?",
+          "default": false,
+          "required": false
+        },
+        {
+          "type": 7,
+          "name": "channel",
+          "description": "Channel to DM Spam",
+          "default": false,
+          "required": false
+        }
+      ],
+      "name": "spam",
+      "description": "dog water lmao"
+  }})
+  client.api.applications(client.user.id).commands.post({data: {
+    "name": "help",
+    "description": "Learn the ins and outs of Stoopid Bot"
+  }
 });
 
 client.on('message', message => {
@@ -13,6 +38,7 @@ client.on('message', message => {
   if (!message.guild) return;
 });
 
+// Recieve interactions
 client.ws.on('INTERACTION_CREATE', async interaction => {
     if (interaction.data.name == "spam") {
       if (Array.isArray(interaction.data.options) && interaction.data.options.length === 2) {
