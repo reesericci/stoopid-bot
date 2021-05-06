@@ -1,4 +1,4 @@
-# stoopid-bot
+# stoopid.xyz
 
 Hosted on github container registry; you are able to host your own stoopid bot!
 
