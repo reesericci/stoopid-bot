@@ -30,7 +30,7 @@ client.on('ready', () => {
   client.api.applications(client.user.id).commands.post({data: {
     "name": "help",
     "description": "Learn the ins and outs of Stoopid Bot"
-  }
+  }})
 });
 
 client.on('message', message => {
