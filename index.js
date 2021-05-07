@@ -82,7 +82,15 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 	      const user = await client.users.fetch(interaction.data.options[0].value)
 	      let i = 0;
         while (i < 15) {
-          user.send(user.toString() + ' dog water lmao')
+          user.send(user.toString() + ' dog water lmao').catch((error) => {
+            console.log(error);
+            client.api.webhooks(client.user.id, interaction.token).messages("@original").patch({
+              data: {
+                content: "failed to DM spam " + user.toString(),
+              }
+            })
+            return;
+          });
 	        i++;
 	        timer(300).then();
         }
