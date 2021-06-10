@@ -60,7 +60,10 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
           data: {
             type: 4,
             data: {
-              content: "@everyone dog water lmao"
+              content: "@everyone dog water lmao",
+	      allowed_mentions: {
+		parse: ["everyone"]
+	      },
             },
           }
         })
