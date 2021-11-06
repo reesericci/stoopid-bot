@@ -1,4 +1,5 @@
 # stoopid.xyz - The best discord troll bot
+<a href="https://endsoftwarepatents.org/innovating-without-patents"><img style="height: 25px;" src="https://static.fsf.org/nosvn/esp/logos/patent-free.svg"></a>
 ## Commands:
 -  /help - help
 -  /spam - spam a channel, or do a DMSpam!
