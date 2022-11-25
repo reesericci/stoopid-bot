@@ -25,7 +25,7 @@ client.on('ready', () => {
         }
       ],
       "name": "spam",
-      "description": "dog water lmao"
+      "description": "spam"
   }})
   client.api.applications(client.user.id).commands.post({data: {
     "name": "help",
@@ -69,7 +69,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
         })
         let i = 0;
         while (i < 14) {
-          new Discord.WebhookClient(client.user.id, interaction.token).send('@everyone dog water lmao')
+          new Discord.WebhookClient(client.user.id, interaction.token).send('@everyone spam')
           i++;
           timer(300).then();	
         }
